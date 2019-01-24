@@ -9,7 +9,7 @@ url: [Maxim](https://github.com/zhangzhao4444/Maxim)
 
 主要新增sh脚本，一键运行
 
-runMaxim.bat  windowsy用户
+runMaxim.bat  windowsy用户   
 runMaxin.sh   mac及Linux 用户
 
 使用方法：
