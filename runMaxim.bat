@@ -4,7 +4,7 @@ CHCP 65001
 ::传入运行时间，此项根据需要修改，单位分钟
 set runTime=1
 ::传入运行包名，此项根据需要修改，全包名
-set packageName=com.jifen.qukan
+set packageName=com.xueqiu.android
 echo 您指定的运行的时间：%runTime% 分钟
 echo 您指定的运行的包：%packageName%
 echo 开始push所需配置文件至手机。。。

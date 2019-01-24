@@ -1,18 +1,18 @@
 #!/bin/bash
 
 #app的包名
-packageName="com.jifen.qukan"
+packageName="com.xueqiu.android"
 #运行时间，正式使用时需要修改。单位为分钟
-runTime=5
+runTime=2
 #需要指定的手机序列号，如果电脑就插了一部手机，可以不填，会自动检测
 serial=$1
 #事件间隔，单位毫秒，如果小于等于200，则不会生成截图
-throttle=210
+throttle=200
 
 adb devices
 if [ ! -n "$serial" ]; then
     serial=$(adb devices | grep -w 'device' | head -n 1 | awk '{print $1}')
-    echo "testtsts"
+    echo "test"
     if [ "$?" -ne 0 ] ; then
         serial="00000"
     fi
@@ -27,7 +27,7 @@ devices=" -s $serial "
 rel_serial=`adb $devices shell getprop ro.serialno | head -n 1 | grep -oE "[0-9a-zA-Z]+"`
 
 #CURRENT_TIME="$serial-$tt"
-CURRENT_TIME=`date +%Y-%m-%d-%H-%M-%S`
+CURRENT_TIME=`date +%Y%m%d%H%M%S`
 
 echo "You set test time: "$runTime" m."
 echo "You set test packageName: "$packageName"."
